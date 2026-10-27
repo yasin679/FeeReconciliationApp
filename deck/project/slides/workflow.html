@@ -1,0 +1,41 @@
+<section id="workflow" data-transition="fade" style="background:#FBFCFC;color:#122221;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#0A6866">End-to-end workflow</p>
+<h2 style="font-size:64px;font-weight:700;line-height:1.1">Every payment passes five gates, each with an owner</h2>
+</div>
+<div style="display:grid;grid-template-columns:200px 1fr 1fr 1fr 1fr 1fr;gap:12px">
+<div></div>
+<p style="font-size:24px;font-weight:600;padding:14px 16px;background:#0A6866;color:#F2F7F6;border-radius:10px">1 Verified</p>
+<p style="font-size:24px;font-weight:600;padding:14px 16px;background:#0A6866;color:#F2F7F6;border-radius:10px">2 Matched</p>
+<p style="font-size:24px;font-weight:600;padding:14px 16px;background:#0A6866;color:#F2F7F6;border-radius:10px">3 Allocated</p>
+<p style="font-size:24px;font-weight:600;padding:14px 16px;background:#0A6866;color:#F2F7F6;border-radius:10px">4 Posted</p>
+<p style="font-size:24px;font-weight:600;padding:14px 16px;background:#0A6866;color:#F2F7F6;border-radius:10px">5 Receipted</p>
+<p style="font-size:24px;font-weight:600;padding:16px 0">Student</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;background:#F2F5F5;border-radius:10px">Pays; may report UTR</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;background:#F2F5F5;border-radius:10px">Sees “under review”</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;color:#8FA09F">—</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;color:#8FA09F">—</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;background:#F2F5F5;border-radius:10px">Gets receipt; raises case</p>
+<p style="font-size:24px;font-weight:600;padding:16px 0">System</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;border:2px dashed #8FA09F;border-radius:10px">Imports feed; blocks duplicates</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;border:2px dashed #8FA09F;border-radius:10px">Matches valid ID; ranks names</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;border:2px dashed #8FA09F;border-radius:10px">Caps lines at money received</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;border:2px dashed #8FA09F;border-radius:10px">Posts once; safe retry</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;border:2px dashed #8FA09F;border-radius:10px">One receipt per line</p>
+<p style="font-size:24px;font-weight:600;padding:16px 0">Operations</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;background:#F2F5F5;border-radius:10px">Counsellor reports cash</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;background:#F2F5F5;border-radius:10px">Works queue; gets evidence</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;background:#F2F5F5;border-radius:10px">Proposes student + fee</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;background:#F2F5F5;border-radius:10px">Retries a failed post</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;background:#F2F5F5;border-radius:10px">Resolves cases</p>
+<p style="font-size:24px;font-weight:600;padding:16px 0">Finance</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;background:#DCEFEE;border:2px solid #0A6866;border-radius:10px">Imports feed; verifies cash</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;background:#F2F5F5;border-radius:10px">Takes escalations</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;color:#8FA09F">—</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;background:#DCEFEE;border:2px solid #0A6866;border-radius:10px">Approves (not own); reversals</p>
+<p style="font-size:24px;line-height:1.3;padding:16px;background:#F2F5F5;border-radius:10px">Reconciles totals daily</p>
+</div>
+<p style="font-size:24px;color:#3D5150">Dashed = automatic · teal = control point. Admin sets policy and roles only.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6A7D7C">4 · Behaviour for auto match, suspected match, missing details, multiple payments and reversals on slides 5–6</p>
+<aside>Read left to right: money must be verified before anyone can match or allocate it; allocation is proposed by Operations and approved by a different Finance approver before anything posts. The two teal cells are the control points that stop money being invented: Finance verifying cash or importing the bank feed, and Finance approving someone else's proposal. Admin is deliberately off the money path: they manage roles and policy only, with every change audited. Likely question: what if Finance is busy and approvals pile up? Answer: the queue shows awaiting-approval count and age; thresholds for single approval on small amounts are a Finance policy decision (A-05), not something I would build in by default.</aside>
+</section>

@@ -1,0 +1,28 @@
+<section id="handoff" data-transition="fade" style="background:#FBFCFC;color:#122221;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#0A6866">Engineering and QA handoff</p>
+<h2 style="font-size:64px;font-weight:700;line-height:1.1">Five questions to settle before sprint one</h2>
+</div>
+<div style="display:grid;grid-template-columns:1.2fr 1fr;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;line-height:1.4;padding:18px 24px;background:#F2F5F5;border-radius:12px"><b style="color:#0A6866">1 ·</b> Bank feed: source, format, and is the UTR unique per bank?</p>
+<p style="font-size:24px;line-height:1.4;padding:18px 24px;background:#F2F5F5;border-radius:12px"><b style="color:#0A6866">2 ·</b> Student system: write contract and idempotency key for postings</p>
+<p style="font-size:24px;line-height:1.4;padding:18px 24px;background:#F2F5F5;border-radius:12px"><b style="color:#0A6866">3 ·</b> Concurrency: record versioning when two reviewers act at once</p>
+<p style="font-size:24px;line-height:1.4;padding:18px 24px;background:#F2F5F5;border-radius:12px"><b style="color:#0A6866">4 ·</b> Ledger of record and the daily reconciliation job</p>
+<p style="font-size:24px;line-height:1.4;padding:18px 24px;background:#F2F5F5;border-radius:12px"><b style="color:#0A6866">5 ·</b> Audit and evidence storage: security, retention, recovery</p>
+<p style="font-size:24px;line-height:1.4;color:#3D5150"><b style="color:#122221">Risks:</b> feed delays leave money unverified; name-only payers stay manual; Finance approval becomes the bottleneck</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<p style="font-size:24px;font-weight:600;color:#3D5150">Prototype evidence QA can rerun</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+<div style="display:flex;flex-direction:column;gap:4px;padding:20px 24px;background:#DCEFEE;border-radius:12px"><p style="font-size:48px;font-weight:700;color:#0A6866">27/27</p><p style="font-size:24px;color:#3D5150">C# self-tests</p></div>
+<div style="display:flex;flex-direction:column;gap:4px;padding:20px 24px;background:#DCEFEE;border-radius:12px"><p style="font-size:48px;font-weight:700;color:#0A6866">14/14</p><p style="font-size:24px;color:#3D5150">End-to-end flows</p></div>
+<div style="display:flex;flex-direction:column;gap:4px;padding:20px 24px;background:#DCEFEE;border-radius:12px"><p style="font-size:48px;font-weight:700;color:#0A6866">0 of 19</p><p style="font-size:24px;color:#3D5150">Security checks open</p></div>
+<div style="display:flex;flex-direction:column;gap:4px;padding:20px 24px;background:#DCEFEE;border-radius:12px"><p style="font-size:48px;font-weight:700;color:#0A6866">20 → 1</p><p style="font-size:24px;color:#3D5150">Race: one posting</p></div>
+</div>
+<p style="font-size:24px;line-height:1.4;color:#3D5150"><b style="color:#122221">Release gates:</b> 16 acceptance criteria pass · control difference ₹0 on a month of real data · Finance signs policy A-01 to A-06</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6A7D7C">9 · Prototype is evidence of the logic, not production code; engineering owns the build</p>
+<aside>I would bring these five questions to the first engineering session rather than answer them myself; each one changes the architecture. Question 1 decides how strong our duplicate rule can be. Question 2 decides whether retries are safe end to end, not just inside our tool. The test numbers are from the working prototype: they prove the rules hold, including when 20 requests hit the same payment at once, and QA can rerun them. I would be clear that the prototype is not the production system. Likely question: what would you cut if engineering says four weeks? Answer: the student-facing claim screen and cases; the bank import, matching, approval and posting are the irreducible core.</aside>
+</section>

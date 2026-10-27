@@ -1,0 +1,20 @@
+{
+  "v": 4,
+  "createdOnFiles": { "v": 1, "at": "2026-10-27T13:20:00Z" },
+  "lists": "css",
+  "title": "Fee Matching: From APM Draft to Development-Ready",
+  "cover": "cover",
+  "order": ["cover", "gaps", "solution", "workflow", "payments", "controls", "screens", "prd", "handoff", "leadership"],
+  "sections": {
+    "s1": { "description": "The problem, the fix and the one control principle", "start": "cover" },
+    "s2": { "description": "What was wrong with the APM requirement", "start": "gaps" },
+    "s3": { "description": "The corrected product: scope, workflow, the nine payments and the controls", "start": "solution" },
+    "s4": { "description": "Screens and the development-ready specification", "start": "screens" },
+    "s5": { "description": "Engineering handoff, QA, APM coaching and founder reporting", "start": "handoff" }
+  },
+  "faces": {
+    "ibm-plex-sans": { "family": "IBM Plex Sans", "href": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" },
+    "ibm-plex-mono": { "family": "IBM Plex Mono", "href": "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&display=swap" }
+  },
+  "designSystems": []
+}

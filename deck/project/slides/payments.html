@@ -1,0 +1,20 @@
+<section id="payments" data-transition="fade" style="background:#F2F5F5;color:#122221;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#0A6866">The nine payment records</p>
+<h2 style="font-size:64px;font-weight:700;line-height:1.1">Three resolve automatically; six need evidence or a second person</h2>
+</div>
+<table style="font-size:24px;color:#122221">
+<tr><th style="width:13%">Payment</th><th style="width:28%">What we know</th><th style="width:31%">Decision</th><th style="width:13%">Posts now?</th><th style="width:15%">Still unknown</th></tr>
+<tr><td>P1 · ₹10,000</td><td>UPI ref S101; payer unregistered</td><td>Auto-match S101; Ops picks fee head</td><td>After approval</td><td>Fee component</td></tr>
+<tr><td>P2 · ₹20,000</td><td>From “R Mehta”, no ID</td><td>Hold: name is a Low candidate</td><td>No</td><td>Whose money</td></tr>
+<tr><td>P3 · ₹15,000</td><td>UPI ref S103</td><td>Auto-match; Tuition, approved</td><td>Yes</td><td>—</td></tr>
+<tr style="background:#E7ECEC"><td>P4 · ₹10,000</td><td>Same transaction ID as P1</td><td>Blocked as duplicate, linked</td><td>Never</td><td>—</td></tr>
+<tr><td>P5 · ₹10,000</td><td>Cash; no deposit proof</td><td>Hold until Finance matches deposit</td><td>No</td><td>Did money arrive</td></tr>
+<tr><td>P6 · ₹30,000</td><td>Note “S101 15000 / S104 15000”</td><td>Two lines, one source, one approval</td><td>After approval</td><td>Fee component</td></tr>
+<tr><td>P7 · ₹20,000</td><td>Screenshot; not in bank feed</td><td>Claim only; links if UTR appears</td><td>No</td><td>Did money arrive</td></tr>
+<tr><td>P8 · −₹5,000</td><td>Partial reversal of P3</td><td>Linked; Finance applies; P3 nets ₹10,000</td><td>After approval</td><td>—</td></tr>
+<tr><td>P9 · ₹25,000</td><td>Payer “Dev Nair”, no ID</td><td>Hold: exact name is a Medium candidate</td><td>No</td><td>Is payer S104</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6A7D7C">5 · Duplicate P4 · split P6 · cash P5 · reversal P8 · screenshot P7 · partial payments P1 + P6 both reach S101</p>
+<aside>Automatic: P1 and P3 match on an explicit student ID, P4 is blocked at import. Nothing posts automatically, though, because the brief never says which fee component the money is for, and I will not infer admission versus tuition. P6 is one source transaction with two allocation lines, approved together so we never half-post a split. P8 never edits P3: it is a linked negative entry and the receipt shows the adjustment. What would conclude the open ones: for P2 and P9, remittance advice or a guardian confirmation from a registered number; for P5, the receipt-book number plus a deposit slip matched to the bank statement; for P7, the bank line with that UTR. Likely question: why not auto-allocate P9 since the name is exact? Answer: names are not unique and parents share names; a wrong allocation costs a correction, a refund conversation and trust.</aside>
+</section>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>Fee Reconciliation Desk</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="mark">FR</div>
+    <div><b>Fee Reconciliation Desk</b><span>Payments · ledgers · receipts</span></div>
+  </div>
+  <div id="who"></div>
+  <div id="tools" class="actions"></div>
+</header>
+<section id="login" class="login" hidden aria-label="Sign in"></section>
+<div class="shell" id="shell" hidden>
+  <nav class="side" id="side" aria-label="Sections"></nav>
+  <main id="view"></main>
+</div>
+<div id="modal" class="scrim" hidden></div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script src="engine.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

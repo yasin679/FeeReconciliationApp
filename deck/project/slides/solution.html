@@ -1,0 +1,32 @@
+<section id="solution" data-transition="fade" style="background:#F2F5F5;color:#122221;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#0A6866">Product solution and MVP</p>
+<h2 style="font-size:64px;font-weight:700;line-height:1.1">Automate the certain, route the rest to evidence</h2>
+</div>
+<div style="display:grid;grid-template-columns:1.15fr 1fr;gap:40px">
+<table style="font-size:24px;color:#122221">
+<tr><th style="width:26%">User</th><th style="width:74%">Needs to</th></tr>
+<tr><td>Student</td><td>See what is recognised, report a payment, get a valid receipt</td></tr>
+<tr><td>Operations</td><td>Find the student behind each payment, with the evidence</td></tr>
+<tr><td>Counsellor</td><td>Report cash with receipt-book and deposit proof</td></tr>
+<tr><td>Finance</td><td>Import the bank feed, approve, apply reversals, verify cash</td></tr>
+<tr><td>Admin</td><td>Manage roles and policy; never move money</td></tr>
+</table>
+<div style="display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:column;gap:10px;padding:28px 32px;background:#DCEFEE;border-radius:14px">
+<h3 style="font-size:28px;font-weight:600;color:#0A6866">Automatic</h3>
+<p style="font-size:24px;line-height:1.4">Import · duplicate block · match on a valid student ID · split parsing · idempotent posting · receipts</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;padding:28px 32px;background:#FBEFD9;border-radius:14px">
+<h3 style="font-size:28px;font-weight:600;color:#8A5300">A person decides</h3>
+<p style="font-size:24px;line-height:1.4">Fee component · name or phone matches · cash · reversals · corrections · every approval, by someone other than the proposer</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;padding:28px 32px;background:#FBFCFC;border:1px solid #D4DEDE;border-radius:14px">
+<h3 style="font-size:28px;font-weight:600;color:#3D5150">Not in the MVP</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D5150">Refund payouts · a new payment gateway · replacing the student system · a two-week promise</p>
+</div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6A7D7C">3 · Dependencies: trusted bank feed format, student-system posting contract, Finance sign-off on policy</p>
+<aside>The scope line I would defend: automation only where the outcome is deterministic and reversible by audit trail. Fee component allocation stays human until Finance approves an order (AA-1); it is a switch, not code. The MVP keeps the student-management system as master for students and balances; this tool owns the reconciliation workflow and writes postings to it. Likely question: will this really cut manual work? Answer: P1 and P3 (explicit ID) and P4 (duplicate) need no investigation at all; the queue gives the rest evidence and an owner. I would baseline last month's unmatched count before promising a percentage.</aside>
+</section>

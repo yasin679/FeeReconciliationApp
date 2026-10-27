@@ -1,0 +1,27 @@
+<section id="prd" data-transition="fade" style="background:#F2F5F5;color:#122221;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#0A6866">Development-ready PRD</p>
+<h2 style="font-size:64px;font-weight:700;line-height:1.1">Separate states, minimum data, explicit permissions</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px;padding:28px 32px;background:#FBFCFC;border:1px solid #D4DEDE;border-radius:14px">
+<h3 style="font-size:28px;font-weight:600;color:#0A6866">State models, one per question</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D5150"><b style="color:#122221">Verification</b> claimed → verified · <b style="color:#122221">Identification</b> unmatched → candidate → matched · <b style="color:#122221">Allocation</b> proposed → approved → posted · <b style="color:#122221">Receipt</b> issued → adjusted · <b style="color:#122221">Reversal</b> requested → applied</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:28px 32px;background:#FBFCFC;border:1px solid #D4DEDE;border-radius:14px">
+<h3 style="font-size:28px;font-weight:600;color:#0A6866">Minimum data entities</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D5150">Payment source record · student claim · cash report · match candidate · allocation proposal + lines · ledger entry · receipt · reversal / correction · case · audit event</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:28px 32px;background:#FBFCFC;border:1px solid #D4DEDE;border-radius:14px">
+<h3 style="font-size:28px;font-weight:600;color:#0A6866">Permissions, by person</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D5150">Student: own data only · Counsellor: report cash · Operations: match, propose, cases · Finance: import, verify, approve others’ work, reverse · Admin: roles and policy, no money</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:28px 32px;background:#FBEFD9;border-radius:14px">
+<h3 style="font-size:28px;font-weight:600;color:#8A5300">Open decisions owned by Finance</h3>
+<p style="font-size:24px;line-height:1.4;color:#3D5150">A-01 fee-component order · A-02 cash deposit window · A-03 match evidence standard · A-04 refund vs credit for excess · A-05 single-approval threshold · A-06 receipt numbering</p>
+</div>
+</div>
+<p style="font-size:24px;line-height:1.4;color:#3D5150"><b style="color:#122221">Integrations:</b> bank statement feed in, student-system posting out (idempotent). <b style="color:#122221">Non-functional:</b> every action audited, role-filtered data, posting retry-safe, daily reconciliation export.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6A7D7C">8 · Full PRD with 16 acceptance criteria and the payment decision matrix submitted alongside</p>
+<aside>The core design choice: the APM draft had one "status" field doing five jobs. I split it into one state machine per question, so "we know who paid" can never be confused with "the money is on the ledger". The entities are the minimum to answer an audit query: who decided, on what evidence, and what changed. The six open decisions are policy, not engineering; I have defaulted each to the safe option in the build (for example, no automatic fee component) so engineering is not blocked while Finance decides. Likely question: why not let Admin approve in a pinch? Answer: anyone who can change roles and also move money can grant themselves anything; keeping Admin off the money path is the cheapest control we have.</aside>
+</section>

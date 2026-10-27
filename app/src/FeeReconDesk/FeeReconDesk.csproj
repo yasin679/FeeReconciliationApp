@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>FeeReconDesk</RootNamespace>
+    <AssemblyName>FeeReconDesk</AssemblyName>
+    <Version>1.0.0</Version>
+    <Product>Fee Reconciliation Desk</Product>
+    <!-- Portable, framework-dependent build: runs anywhere the ASP.NET Core 8 runtime is installed. -->
+    <UseAppHost>false</UseAppHost>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+
+</Project>
